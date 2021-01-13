@@ -1,0 +1,21 @@
+﻿@model Music
+
+<div class="card card-outline-primary m-1 p-1">
+    <div class="bg-faded p-1">
+
+        <div style="width:200px;height:50px">
+            <b> @Model.Name</b>
+        </div>
+        <br />
+        <img src="~/Images/@Model.UrlImage" alt="Alternate Text" width="200" height="200" />
+        <br />
+        <div><p><b>Tác Giả: @Model.Author </b></p></div>
+        <div ><p><b>Xuất Bản: @Model.ReleaseDate</b></p></div>
+       
+        <div><p><b>Giá bán: @Model.Price.ToString("c")</b></p></div>
+        <div><p><b>Lượt thích: @Model.Likes </b></p></div>
+
+    </div>
+
+</div>
+

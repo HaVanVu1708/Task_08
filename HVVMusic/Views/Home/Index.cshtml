@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h1>Welcome to ZingMp3 </h1>
+<br />
+
+@model MusicsListViewModel
+
+<div class="container">
+    <div class="row">
+        @foreach (var p in Model.Musics)
+
+        {
+            <partial name="MusicSummary" model="p" />
+        }
+
+
+    </div>
+    
+
+</div>
+<div page-model="@Model.PagingInfo" page-ation="Index" page-classes-enbled="true"
+     page-class="btn" page-class-normal="btn-outline-dark"
+     page-class-selected="btn-primary" class="btn-group pull-right m-1">
+
+</div>
